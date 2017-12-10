@@ -124,8 +124,8 @@ io.on("connection", socket => {
 // Server
 // ----------------------------------------
 const PORT = process.env.PORT || 5000;
-const HOST = "localhost";
+// const HOST = "localhost";
 
-server.listen(PORT, HOST, () => {
-	console.log(`Listening on http://${HOST}:${PORT}`);
+server.listen(PORT, () => {
+	console.log(`Listening on http://localhost:${PORT}`);
 });
