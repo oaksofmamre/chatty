@@ -1,8 +1,8 @@
 {
-  "name": "project_superchat",
+  "name": "superquick-chat",
   "version": "1.0.0",
-  "description": "Build a realtime multi-room chat application. Make it super.",
-  "main": "index.js",
+  "description": "Got time for a super quick chat? A simple and fast chat app socket.io",
+  "main": "app.js",
   "dependencies": {
     "body-parser": "^1.18.2",
     "cookie-session": "^2.0.0-beta.3",
@@ -23,12 +23,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oaksofmamre/project_superchat.git"
+    "url": "git+https://github.com/oaksofmamre/superquick-chat.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Dennis C",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/oaksofmamre/project_superchat/issues"
+    "url": "https://github.com/oaksofmamre/superquick-chat/issues"
   },
-  "homepage": "https://github.com/oaksofmamre/project_superchat#readme"
+  "homepage": "https://github.com/oaksofmamre/superquick-chat#readme"
 }

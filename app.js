@@ -7,12 +7,10 @@ const io = require("socket.io")(server);
 
 const handlebars = require("express-handlebars");
 const bodyParser = require("body-parser");
-const expressSession = require("express-session");
 const redis = require("./lib/redis-lib");
 
 const favicon = require("serve-favicon");
 const path = require("path");
-const PORT = process.env.PORT || 3000;
 
 //setup handlebars
 app.set("views", __dirname + "/views");
@@ -21,41 +19,35 @@ app.set("view engine", "handlebars");
 
 //setup middleware
 app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
-console.log(path.join(__dirname, "public", "favicon.ico"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + "/public"));
-// this code may not be useful
-// see here for app.use() usage: https://expressjs.com/en/api.html#path-examples
 app.use(
 	"/socket.io",
 	express.static(__dirname + "node_modules/socket.io-client/dist/")
 );
-//nice to have / do later: store session in redis, not memory
-//attaches session data to req.session
-//to destroy session: req.session = null
-//note: I created a session just for practice
-//the session is not explicitly used for any functionality
+
+// ----------------------------------------
+// Sessions/Cookies
+// ----------------------------------------
+var cookieSession = require("cookie-session");
+
 app.use(
-	expressSession({
-		name: "chat-session",
-		secret: "secret sauce", // normally this is secret
-		saveUninitialized: true,
-		resave: true,
-		cookie: { maxAge: 24 * 60 * 60 * 1000 } // 24 hours
+	cookieSession({
+		name: "session",
+		keys: ["secretsauce123"],
+		maxAge: 24 * 60 * 60 * 1000 // 24 hours
 	})
 );
 
+app.use((req, res, next) => {
+	res.locals.session = req.session;
+	res.locals.currentUser = req.session.currentUser;
+	next();
+});
+// ----------------------------------------
+
 //register routes
 app.get("/", (req, res) => {
-	console.log("In route........................");
-	//learn about the session here
-	// if (req.session) {
-	// 	console.log("session = " + req.session);
-	// 	console.log("session id = " + req.sessionID);
-	// 	console.log("session's cookie = " + req.session.cookie);
-	// } else {
-	// 	console.log("no session");
-	// }
 	res.render("results", {});
 });
 
@@ -128,6 +120,12 @@ io.on("connection", socket => {
 	});
 });
 
-server.listen(PORT, () => {
-	console.log(`Listening on localhost:${PORT}`);
+// ----------------------------------------
+// Server
+// ----------------------------------------
+const PORT = process.env.PORT || 5000;
+const HOST = "localhost";
+
+server.listen(PORT, HOST, () => {
+	console.log(`Listening on http://${HOST}:${PORT}`);
 });
