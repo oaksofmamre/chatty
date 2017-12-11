@@ -23,7 +23,7 @@ localhost:5000
 On Heroku:
 
 ```
-http://sqchat.herokuapp.com
+https://sqchat.herokuapp.com
 ```
 
 ## Highlights:
