@@ -123,7 +123,7 @@ io.on("connection", socket => {
 // ----------------------------------------
 // Server
 // ----------------------------------------
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3333;
 // const HOST = "localhost";
 
 server.listen(PORT, () => {
