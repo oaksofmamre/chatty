@@ -8,19 +8,29 @@ A fun, real-time chat app using socket.io!
 
 ## Usage
 
-From command-line:
+### Installation
 
-```
-node app
+Install the dependencies
+
+```sh
+$ npm install
 ```
 
-From browser:
+### Serve
+
+Start the server
+
+```sh
+$ node app
+```
+
+Access from your browser:
 
 ```
 localhost:5000
 ```
 
-On Heroku:
+### Demo
 
 ```
 https://sqchat.herokuapp.com
