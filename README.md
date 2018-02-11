@@ -2,10 +2,6 @@
 
 Chatty is a real-time chat app
 
-## Synopsis
-
-Chatty is a real-time chat app
-
 ## Usage
 
 ### Installation
@@ -33,7 +29,7 @@ localhost:5000
 ### Demo
 
 ```
-https://sqchat.herokuapp.com
+https://chatty-oaks.herokuapp.com/
 ```
 
 ## Highlights:
@@ -45,6 +41,6 @@ https://sqchat.herokuapp.com
 * with Handlebars for templating
 * and logins managed with Redis
 
-by Dennis C 
+by Dennis C
 
 :coffee:
