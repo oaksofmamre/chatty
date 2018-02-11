@@ -1,8 +1,7 @@
 {
-  "name": "superquick-chat",
+  "name": "chatty",
   "version": "1.0.0",
-  "description":
-    "Got time for a super quick chat? A simple and fast chat app socket.io",
+  "description": "chatty - a simple and fast chat app using socket.io",
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.18.2",
@@ -25,14 +24,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oaksofmamre/superquick-chat.git"
-  },
   "author": "Dennis C",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/oaksofmamre/superquick-chat/issues"
-  },
-  "homepage": "https://github.com/oaksofmamre/superquick-chat#readme"
+  "license": "MIT"
 }

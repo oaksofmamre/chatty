@@ -1,10 +1,10 @@
-# Super Quick Chat
+# Chatty
 
-Got time for a super-quick chat?
+Chatty is a real-time chat app
 
 ## Synopsis
 
-A fun, real-time chat app using socket.io!
+Chatty is a real-time chat app
 
 ## Usage
 
@@ -43,6 +43,8 @@ https://sqchat.herokuapp.com
 * responsive website design
 * using JavaScript/jQuery
 * with Handlebars for templating
-* and logins managed in Redis
+* and logins managed with Redis
 
-#### by Dennis C :coffee:
+by Dennis C 
+
+:coffee:
