@@ -28,9 +28,7 @@ localhost:5000
 
 ### Demo
 
-```
 https://chatty-oaks.herokuapp.com/
-```
 
 ## Highlights:
 
@@ -40,7 +38,5 @@ https://chatty-oaks.herokuapp.com/
 * using JavaScript/jQuery
 * with Handlebars for templating
 * and logins managed with Redis
-
-by Dennis C
 
 :coffee:
